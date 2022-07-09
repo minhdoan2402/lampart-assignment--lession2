@@ -1,9 +1,10 @@
 <?php require 'layout/header.php' ?>
 <form action="" method="GET">
     <label class="form-inline justify-content-end">Tìm kiếm: <input type="search" name="search" class="form-control"
-            value="<?= $search ?>">
+            value="<?= $_GET['search'] ?? '' ?>">
         <button class="btn btn-danger">Tìm</button>
     </label>
+    <input type="hidden" name="c" value="category">
 </form>
 <div class="bg-white clearfix">
     <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#newCategoryModal">

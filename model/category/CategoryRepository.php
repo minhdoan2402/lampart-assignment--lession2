@@ -29,7 +29,7 @@ class CategoryRepository
 
     function getByPattern($search)
     {
-        $cond = " CategoryName LIKE '%$search%'";
+        $cond = "CategoryName LIKE '%$search%'";
         return $this->fetch($cond);
     }
 

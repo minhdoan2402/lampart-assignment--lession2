@@ -47,17 +47,22 @@ class CategoryController
 
     function delete()
     {
-        $categoryRepository = new CategoryRepository();
         $data = $_POST;
         $id = $data['id'];
         $productRepository =  new ProductRepository();
-        $cond = " product.CategoryID = $id";
-        $categoryDelete = $productRepository->fetch($cond);
-        if ($categoryDelete != 0) {
-            $_SESSION['error'] = 'Không thể xóa danh mục này vì vẫn còn sản phẩm!!';
-        } else if ($categoryDelete == 0) {
+        $categoryRepository = new CategoryRepository();
 
-            $_SESSION['success'] = 'Đã xóa danh mục thành công!' . $categoryRepository->delete($id);
+        $cond = " product.CategoryID = {$id}";
+        $fetchProductResult = $productRepository->fetch($cond);
+        if ($fetchProductResult["total"] != 0) {
+            $_SESSION['error'] = 'Không thể xóa danh mục này vì vẫn còn sản phẩm!!';
+        } else {
+            $deleted = $categoryRepository->delete($id);
+            if ($deleted) {
+                $_SESSION['success'] = 'Đã xóa danh mục thành công!';
+            } else {
+                $_SESSION['error'] = 'lỗi';
+            }
         }
 
         header('location: ?c=category');
