@@ -21,31 +21,18 @@
             <div class="error bg-danger container-fluid text-center"></div>
             <div class="message bg-primary container-fluid text-center"></div>
         </div>
-        <form action="" method="GET">
-            <label class="form-inline justify-content-end">Tìm kiếm: <input type="search" name="search"
-                    class="form-control" value="<?= $_GET['search'] ?? '' ?>">
-                <button class="btn btn-danger">Tìm</button>
-            </label>
-        </form>
-        <div class="bg-white clearfix">
-            <button type="button" class="btn btn-primary float-right" data-toggle="modal"
-                data-target="#newProductModal">
-                <i class="fa-solid fa-circle-plus"></i>
-            </button>
-        </div>
-
 
         <?php
         $message = "";
         $message_type = "";
-        if (!empty($_SESSION['success'])) {
+        if (!empty($_SESSION['success'])) :
             $message = $_SESSION['success'];
             unset($_SESSION['success']);
             $message_type = "success";
-        } else if (!empty($_SESSION['error'])) {
+        elseif (!empty($_SESSION['error'])) :
             $message = $_SESSION['error'];
             unset($_SESSION['error']);
             $message_type = "danger";
-        }
+        endif
         ?>
         <div class="alert alert-<?= $message_type ?>" role="alert"><?= $message ?></div>

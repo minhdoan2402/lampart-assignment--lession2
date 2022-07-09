@@ -17,6 +17,7 @@ class ProductRepository
             $countSql .= " WHERE $cond";
             $sql .= " WHERE $cond";
         }
+
         $sql .= " ORDER BY product.ProductID DESC LIMIT {$limit} OFFSET {$offset}";
 
         $countResult = $conn->query($countSql);

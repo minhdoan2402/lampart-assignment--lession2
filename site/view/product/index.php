@@ -1,4 +1,15 @@
 <?php require 'layout/header.php' ?>
+<form action="" method="GET">
+    <label class="form-inline justify-content-end">Tìm kiếm: <input type="search" name="search" class="form-control"
+            value="<?= $_GET['search'] ?? '' ?>">
+        <button class="btn btn-danger">Tìm</button>
+    </label>
+</form>
+<div class="bg-white clearfix">
+    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#newProductModal">
+        <i class="fa-solid fa-circle-plus"></i>
+    </button>
+</div>
 <table class="table table-hover">
     <thead>
         <tr>
