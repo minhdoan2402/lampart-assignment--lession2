@@ -1,0 +1,12 @@
+.active {
+	background-color: yellow !important;
+	color: red !important;
+}
+
+label {
+	font-weight: normal;
+}
+
+.img-product {
+	width: 100px;
+}
