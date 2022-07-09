@@ -13,10 +13,10 @@
                 <div id="product-detail-id"></div>
 
                 <div><label for="" class="text-primary">Product Name</label></div>
-                <div id="product-detail-name">iphone 12</div>
+                <div id="product-detail-name"></div>
 
                 <div><label for="" class="text-primary">Category Name</label></div>
-                <div id="product-detail-category">iphone</div>
+                <div id="product-detail-category"></div>
 
                 <div><label for="" class="text-primary">Featured Image</label></div>
                 <div id="product-detail-image"><img src="../../../upload/lampart-logo.jpg" alt="" style="width: 100px;">
