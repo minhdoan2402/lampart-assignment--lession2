@@ -43,7 +43,7 @@ class ProductController
             $_SESSION['error'] = 'Không thể tạo sản phẩm!';
         }
 
-        header('location: /');
+        header('location: ?c=product');
     }
 
     function edit()
@@ -67,7 +67,7 @@ class ProductController
             $_SESSION['error'] = 'Không thể cập nhật sản phẩm!';
         }
 
-        header('location: /');
+        header('location: ?c=product');
     }
 
     function delete()
@@ -83,7 +83,7 @@ class ProductController
             $_SESSION['error'] = 'Không thể xóa sản phẩm!';
         }
 
-        header('location: /');
+        header('location: ?c=product');
     }
 
     function copy()
@@ -99,6 +99,6 @@ class ProductController
             $_SESSION['error'] = 'Không thể copy sản phẩm!';
         }
 
-        header('location: /');
+        header('location: ?c=product');
     }
 }
