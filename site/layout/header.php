@@ -15,7 +15,7 @@
 <body>
     <?php global $c; ?>
     <div class="container" style="margin-top:20px;">
-        <a href="/" class="<?= $c == 'product' ? 'active' : '' ?> btn btn-info">Products</a>
+        <a href="?c=product" class="<?= $c == 'product' ? 'active' : '' ?> btn btn-info">Products</a>
         <a href="?c=category" class="<?= $c == 'category' ? 'active' : '' ?> btn btn-info">Category</a>
         <div style="height:40px; margin-top:20px">
             <div class="error bg-danger container-fluid text-center"></div>
