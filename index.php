@@ -1,3 +1,1 @@
-<?php 
-    header('location: site');
-?>
+<?php header('location: site');
