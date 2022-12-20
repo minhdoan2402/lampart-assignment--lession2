@@ -19,7 +19,7 @@
                 <div id="product-detail-category"></div>
 
                 <div><label for="" class="text-primary">Featured Image</label></div>
-                <div id="product-detail-image"><img src="../../../upload/lampart-logo.jpg" alt="" style="width: 100px;">
+                <div id="product-detail-image"><img src="" alt="" style="width: 100px;">
                 </div>
             </div>
         </div>
